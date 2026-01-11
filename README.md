@@ -12,7 +12,7 @@
 
 | モデル | パス | 用途 |
 |--------|------|------|
-| Detection | `C:\Users\CorneAI\FacePhoto_instance\models\295+cerebhq1-20000_yolo11l.pt` | 両眼検出 |
+| Detection | `YOLO11l-detect.pt` | 両眼検出 |
 | Segmentation | `YOLO11n-seg.pt` | 眼領域セグメンテーション |
 
 ## セグメンテーションクラス
@@ -31,16 +31,14 @@
 ### 1. 環境セットアップ
 
 ```bash
-# 仮想環境をアクティベート
-.\venv\Scripts\activate
-
-# 依存パッケージ（既にインストール済み）
-pip install ultralytics opencv-python numpy matplotlib
+# 依存パッケージ（Colabでは!をつけてコマンドを入れる）
+!pip install ultralytics
 ```
 
 ### 2. 推論の実行
 
 `inference.ipynb` を開いて上から順にセルを実行:
+パスは実際のフォルダに合わせて変えてください
 
 1. **入力画像の設定** (cell-3)
    ```python
